@@ -1,10 +1,11 @@
 import { getJoke, capturatePunctuation, getWeather } from '../dist/functions.js'
 import Valoration from '../dist/valoration.js'
 
-// test('returns a joke as a string', async () => {
-//     const joke = await getJoke();
-//     expect(joke).resolves.toBe('string')
-// });
+test('returns a joke as a string', async () => {
+    const joke = await getJoke();
+    console.log(joke)
+    expect(typeof joke).toBe('string')
+});
 
 test('returns an object with properties of Valoration class', () => {
     const date = new Date().toISOString();

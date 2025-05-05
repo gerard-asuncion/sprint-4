@@ -1,8 +1,5 @@
 
 import Valoration from "./valoration.js"
-// import dotenv from "dotenv"
-
-// dotenv.config()
 
 interface Punctuation {
     joke: string,
