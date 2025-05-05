@@ -42,5 +42,5 @@ app.get('/weather', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log('Backend listening on http://localhost:3001');
+    console.log(`Backend listening on http://localhost:${PORT}`);
 });

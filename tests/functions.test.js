@@ -19,7 +19,8 @@ test('returns a number', async () => {
     expect(typeof temp).toBe('number')
 });
 
-// test('returns a string', async () => {
-//     const weather = await getWeather()    
-//     expect(weather.icon).toBe('string')
-// });
+test('returns a string', async () => {
+    const weather = await getWeather()
+    const icn = weather.icon   
+    expect(typeof icn).toBe('string')
+});

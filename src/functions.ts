@@ -98,7 +98,7 @@ export function pushPunctuation(score: number, joke: string): void {
     }
 }
 
-async function getWeather(): Promise<WeatherTempIcon | null> {
+export async function getWeather(): Promise<WeatherTempIcon | null> {
 
     interface Data {
         main: Main,
