@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gerard Asuncion">
+    <meta name="keywords" content="typescript, API">
+    <meta name="description" content="dad joke generator">
+    <title>Generador d'acudits</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-custom bg-cover bg-center min-h-screen">
+
+    <section class="weather">
+        <div id="weather-container"></div>
+    </section>
+
+    <section class="joke">
+        <div class="title">
+            <h2>Preparat per riure?</h2>
+            <img src="../images/smiley.jpg" alt="smiley">
+        </div>
+        <div class="text">
+            <div id="joke-div"></div>
+        </div>
+        <div class="punctuation">
+            <button id="bad" class="punctuation-button">
+                <img src="#" alt="bad">
+            </button>
+            <button id="neutral" class="punctuation-button">
+                <img src="#" alt="neutral">
+            </button>
+            <button id="good" class="punctuation-button">
+                <img src="#" alt="good">
+            </button>
+        </div>
+        <button id="showButton">Següent acudit</button>
+    </section>
+
+    <script src="../dist/bbdd.js"></script>r
+    <script src="../dist/valoration.js"></script>
+    <script type="module" src="../dist/main.js"></script> 
+</body>
+
+</html>
