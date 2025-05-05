@@ -133,7 +133,7 @@ export async function getWeather(): Promise<WeatherTempIcon | null> {
 
     } catch(error) {
 
-        console.log(error)
+        console.log('Error fetching weather...', error)
 
         return null
 
