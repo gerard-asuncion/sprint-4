@@ -1,8 +1,8 @@
 
 import Valoration from "./valoration.js"
+// import dotenv from "dotenv"
 
-// console.log(import.meta.env.MODE)
-// console.log(import.meta.env.VITE_WEATHER_API_KEY)
+// dotenv.config()
 
 interface Punctuation {
     joke: string,
@@ -113,21 +113,10 @@ async function getWeather(): Promise<WeatherTempIcon | null> {
         icon: string
     }
 
-    const options: object = {
-        method: 'GET',
-        headers: {
-            'Accept': 'application/json',
-        }
-    }
 
     try {
 
-        const weatherApiKey: string = "123";
-        const lat: number = 41.3851;
-        const lon: number = 2.1734;
-        const url: string = "https://api.openweathermap.org/data/2.5/weather";
-
-        const response: Response = await fetch(`${url}?lat=${lat}&lon=${lon}&appid=${weatherApiKey}&units=metric`, options);
+        const response: Response = await fetch('http://localhost:3001/weather');
 
         if(!response.ok) throw new Error(`Error HTTP: ${response.status}`)
 
