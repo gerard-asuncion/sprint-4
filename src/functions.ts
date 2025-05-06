@@ -1,5 +1,6 @@
 
 import Valoration from "./valoration.js"
+import { reportAcudits } from "./bbdd.js"
 
 interface Punctuation {
     joke: string,

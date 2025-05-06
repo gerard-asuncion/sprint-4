@@ -4,4 +4,4 @@ interface Punctuation {
     date: string
 }
 
-const reportAcudits: Punctuation[] = [];
+export const reportAcudits: Punctuation[] = [];
