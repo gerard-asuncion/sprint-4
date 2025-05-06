@@ -1,7 +1,7 @@
 
-import Valoration from "./valoration.ts"
-import { reportAcudits } from "./bbdd.ts"
-import { WEATHER_API_KEY } from "./config.ts"
+import Valoration from "./valoration.js"
+import { reportAcudits } from "./bbdd.js"
+import { WEATHER_API_KEY } from "./config.js"
 
 interface Punctuation {
     joke: string,
