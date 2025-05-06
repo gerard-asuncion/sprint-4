@@ -1,4 +1,4 @@
-import { getJoke, printJoke, pushPunctuation, printWeather } from './functions.js'
+import { getJoke, printJoke, pushPunctuation, printWeather } from './functions.ts'
 
 let showButton = document.getElementById("showButton")!
 let goodButton = document.getElementById("good")!

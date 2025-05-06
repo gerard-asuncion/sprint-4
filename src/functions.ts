@@ -1,6 +1,7 @@
 
-import Valoration from "./valoration.js"
-import { reportAcudits } from "./bbdd.js"
+import Valoration from "./valoration.ts"
+import { reportAcudits } from "./bbdd.ts"
+import { WEATHER_API_KEY } from "./config.ts"
 
 interface Punctuation {
     joke: string,
@@ -111,10 +112,22 @@ export async function getWeather(): Promise<WeatherTempIcon | null> {
         icon: string
     }
 
+    const options = {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+        }
+    }
+
+    const weatherApiKey = WEATHER_API_KEY;
+    const lat = 41.3851;
+    const lon = 2.1734;
+    const url = "https://api.openweathermap.org/data/2.5/weather";
+
 
     try {
 
-        const response: Response = await fetch('http://localhost:3001/weather');
+        const response = await fetch(`${url}?lat=${lat}&lon=${lon}&appid=${weatherApiKey}&units=metric`, options);
 
         if(!response.ok) throw new Error(`Error HTTP: ${response.status}`)
 
